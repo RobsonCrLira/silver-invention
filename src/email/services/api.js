@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-exports.getProducts = async () => {
+exports.searchProduct = async () => {
   try {
     const product = await axios.get(
       `${process.env.PRODUCT_SEARCH_URL}`,
       {
         headers: {
-          Accept: `${process.env.HEADERS_ACCEPT}`,
-          'Content-Type': `${process.env.HEADERS_CONTENT_TYPE}`,
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
       },
     );

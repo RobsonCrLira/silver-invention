@@ -1,4 +1,4 @@
 import 'dotenv/config';
 import app from './app';
 
-app.listen(3333, () => { console.log('server in run 3333'); });
+app.listen(process.env.PORT_API, () => { console.log(`Server is Running in Port ${process.env.PORT_API}`); });
