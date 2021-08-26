@@ -1,14 +1,12 @@
 ## 📝 Menu
 
-- [Projeto](#projeto)
-- [Ferramentas Utilizadas](#ferramentas)
-- [Usando Docker](#docker)
-- [Arquivo de configuração](#configuracao)
-- [Instalação](#instalacao)
-- [Executar o projeto](#executar)
-- [Acesso ao projeto](#acesso)
-
-&nbsp;
+- Projeto
+- Ferramentas Utilizadas
+- Usando Docker
+- Arquivo de configuração
+- Instalação
+- Executar o projeto
+- Acesso ao projeto
 
 ## Projeto
 
@@ -54,6 +52,8 @@ MAIL_PASS= # pass ou passoword do servico de envio de email
 REDIS_HOST= # host que o redis utiliza // por padrão é utilizado 127.0.0.1
 REDIS_PORT= # host que o redis utiliza // por padrão é utilizado 6397
 
+HEADERS_ACCEPT=
+HEADERS_CONTENT_TYPE=
 PRODUCT_SEARCH_URL= # URL que o usará para fazer a pesquisa
 ```
 
@@ -88,3 +88,11 @@ Após executar o projeto o mesmo poderá ser visualizado através da URL:
 `http://localhost:{PORT}/`
 
 <font color="RED">Para executar sem que ocorrá o `PORT` do arquivo `.env` deve estar setado!</font>
+
+## Envio de email
+
+Para enviar o email deve usar um metodo `POST` na rota `/api/sendEmail` usando [Insomnia](https://insomnia.rest/) ou [Postman](https://www.postman.com/) passando os valores como esta descrito abaixo
+
+```yaml
+{ 'name': 'Robson', 'email': 'Robson@gmail.com' }
+```

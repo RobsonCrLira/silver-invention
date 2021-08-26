@@ -6,8 +6,8 @@ exports.searchProduct = async () => {
       `${process.env.PRODUCT_SEARCH_URL}`,
       {
         headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
+          Accept: `${process.env.HEADERS_ACCEPT}`,
+          'Content-Type': `${process.env.HEADERS_CONTENT_TYPE}`,
         },
       },
     );
